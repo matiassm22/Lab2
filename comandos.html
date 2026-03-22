@@ -1,9 +1,49 @@
-<h1>Comandos Docker</h1>
-<ul>
-<li>docker run</li>
-<li>docker ps</li>
-<li>docker build</li>
-<li>docker stop</li>
-<li>docker images</li>
-</ul>
+<h1>Comandos básicos de Docker</h1>
+
+<h2>1. Ejecutar un contenedor</h2>
+<p>Permite ejecutar una imagen de Docker en un contenedor.</p>
+<pre>docker run hello-world</pre>
+
+<h2>2. Listar contenedores en ejecución</h2>
+<p>Muestra los contenedores que están activos.</p>
+<pre>docker ps</pre>
+
+<h2>3. Listar todos los contenedores</h2>
+<p>Muestra todos los contenedores, incluso los detenidos.</p>
+<pre>docker ps -a</pre>
+
+<h2>4. Construir una imagen</h2>
+<p>Construye una imagen a partir de un Dockerfile.</p>
+<pre>docker build -t nombre-imagen .</pre>
+
+<h2>5. Detener un contenedor</h2>
+<p>Detiene un contenedor en ejecución usando su ID.</p>
+<pre>docker stop ID_CONTENEDOR</pre>
+
+<h2>6. Eliminar un contenedor</h2>
+<p>Elimina un contenedor que ya no se utiliza.</p>
+<pre>docker rm ID_CONTENEDOR</pre>
+
+<h2>7. Ver imágenes disponibles</h2>
+<p>Lista todas las imágenes descargadas en el sistema.</p>
+<pre>docker images</pre>
+
+<h2>8. Eliminar una imagen</h2>
+<p>Elimina una imagen del sistema.</p>
+<pre>docker rmi nombre-imagen</pre>
+
+<h2>9. Ejecutar en segundo plano</h2>
+<p>Permite ejecutar un contenedor en modo "detached".</p>
+<pre>docker run -d -p 8080:80 nombre-imagen</pre>
+
+<h2>10. Ver logs de un contenedor</h2>
+<p>Muestra los registros de ejecución de un contenedor.</p>
+<pre>docker logs ID_CONTENEDOR</pre>
+
+<h2>Conclusión</h2>
+<p>
+Estos comandos permiten administrar contenedores e imágenes en Docker,
+facilitando el desarrollo, pruebas y despliegue de aplicaciones.
+</p>
+
 <a href="index.html">Volver</a>
