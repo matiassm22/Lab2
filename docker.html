@@ -1,71 +1,62 @@
-<h1>Instalación y uso de Docker</h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Docker</title>
+<link rel="stylesheet" href="styles.css">
+</head>
 
-<h2>¿Qué es Docker?</h2>
-<p>
-Docker es una plataforma que permite crear, ejecutar y administrar aplicaciones dentro de contenedores.
-Los contenedores son entornos aislados que incluyen todo lo necesario para ejecutar una aplicación,
-como código, librerías y dependencias.
-</p>
+<body>
 
-<h2>Requisitos del sistema</h2>
+<header><h1>Docker</h1></header>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="docker.html">Docker</a>
+<a href="comandos.html">Comandos</a>
+</nav>
+
+<section class="contenedor-info">
+
+<div class="box">
+<h3>¿Qué es Docker?</h3>
+<p>Docker es una plataforma que permite crear, ejecutar y gestionar aplicaciones en contenedores, asegurando que funcionen igual en cualquier entorno.</p>
+</div>
+
+<div class="box">
+<h3>Requisitos</h3>
 <ul>
-<li>Windows 10/11 de 64 bits</li>
-<li>Virtualización activada en la BIOS</li>
-<li>WSL 2 instalado (Subsistema de Windows para Linux)</li>
-<li>Al menos 4 GB de RAM</li>
+<li>Windows 10/11 64 bits</li>
+<li>WSL 2</li>
+<li>Virtualización activada</li>
+<li>4GB RAM mínimo</li>
 </ul>
+</div>
 
-<h2>Pasos de instalación</h2>
+<div class="box">
+<h3>Instalación</h3>
+<ol>
+<li>Descargar Docker Desktop</li>
+<li>Instalar el programa</li>
+<li>Reiniciar el equipo</li>
+<li>Abrir Docker Desktop</li>
+</ol>
+</div>
 
-<h3>1. Descargar Docker Desktop</h3>
-<p>
-Ingresar al sitio oficial de Docker y descargar Docker Desktop para Windows.
-</p>
-
-<h3>2. Instalar el programa</h3>
-<p>
-Ejecutar el instalador y seguir los pasos. Durante la instalación se configurará automáticamente WSL 2.
-</p>
-
-<h3>3. Reiniciar el equipo</h3>
-<p>
-Una vez finalizada la instalación, es recomendable reiniciar el computador para aplicar todos los cambios.
-</p>
-
-<h3>4. Abrir Docker Desktop</h3>
-<p>
-Ejecutar Docker Desktop y esperar hasta que indique "Docker is running".
-</p>
-
-<h3>5. Verificar instalación</h3>
-<p>
-Abrir una terminal (PowerShell o Git Bash) y ejecutar el siguiente comando:
-</p>
-
+<div class="box">
+<h3>Verificación</h3>
 <pre>docker run hello-world</pre>
+</div>
 
-<p>
-Si aparece un mensaje de bienvenida, significa que Docker está funcionando correctamente.
-</p>
+<div class="box">
+<h3>Uso básico</h3>
+<pre>docker build -t app .</pre>
+<pre>docker run -d -p 8080:80 app</pre>
+</div>
 
-<h2>Uso básico de Docker</h2>
+</section>
 
-<h3>Construir una imagen</h3>
-<pre>docker build -t nombre-imagen .</pre>
+<footer><p>Docker - Lab 2</p></footer>
 
-<h3>Ejecutar un contenedor</h3>
-<pre>docker run -d -p 8080:80 nombre-imagen</pre>
-
-<h3>Ver contenedores activos</h3>
-<pre>docker ps</pre>
-
-<h3>Detener un contenedor</h3>
-<pre>docker stop ID_CONTENEDOR</pre>
-
-<h2>Conclusión</h2>
-<p>
-Docker es una herramienta fundamental en el desarrollo moderno, ya que permite ejecutar aplicaciones de forma
-consistente en cualquier entorno, facilitando el despliegue y la portabilidad.
-</p>
-
-<a href="index.html">Volver</a>
+</body>
+</html>
