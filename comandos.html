@@ -18,14 +18,59 @@
 
 <section class="contenedor-info">
 
-<div class="box"><h3>Ejecutar</h3><pre>docker run hello-world</pre></div>
-<div class="box"><h3>Contenedores activos</h3><pre>docker ps</pre></div>
-<div class="box"><h3>Todos los contenedores</h3><pre>docker ps -a</pre></div>
-<div class="box"><h3>Construir imagen</h3><pre>docker build -t app .</pre></div>
-<div class="box"><h3>Detener</h3><pre>docker stop ID</pre></div>
-<div class="box"><h3>Eliminar contenedor</h3><pre>docker rm ID</pre></div>
-<div class="box"><h3>Ver imágenes</h3><pre>docker images</pre></div>
-<div class="box"><h3>Eliminar imagen</h3><pre>docker rmi app</pre></div>
+<div class="box">
+<h3>Ejecutar contenedor</h3>
+<pre>docker run hello-world</pre>
+<p>Ejecuta un contenedor de prueba para verificar que Docker funciona correctamente.</p>
+</div>
+
+<div class="box">
+<h3>Contenedores activos</h3>
+<pre>docker ps</pre>
+<p>Muestra los contenedores que están en ejecución.</p>
+</div>
+
+<div class="box">
+<h3>Todos los contenedores</h3>
+<pre>docker ps -a</pre>
+<p>Lista todos los contenedores, incluso los detenidos.</p>
+</div>
+
+<div class="box">
+<h3>Construir imagen</h3>
+<pre>docker build -t app .</pre>
+<p>Crea una imagen Docker desde un Dockerfile.</p>
+</div>
+
+<div class="box">
+<h3>Ejecutar con puerto</h3>
+<pre>docker run -d -p 8080:80 app</pre>
+<p>Ejecuta el contenedor en segundo plano y conecta el puerto al navegador.</p>
+</div>
+
+<div class="box">
+<h3>Detener contenedor</h3>
+<pre>docker stop ID</pre>
+<p>Detiene un contenedor en ejecución.</p>
+</div>
+
+<div class="box">
+<h3>Eliminar contenedor</h3>
+<pre>docker rm ID</pre>
+<p>Elimina un contenedor detenido.</p>
+</div>
+
+<div class="box">
+<h3>Ver imágenes</h3>
+<pre>docker images</pre>
+<p>Muestra todas las imágenes disponibles.</p>
+</div>
+
+<div class="box">
+<h3>Eliminar imagen</h3>
+<pre>docker rmi app</pre>
+<p>Elimina una imagen del sistema.</p>
+</div>
 
 </section>
 
