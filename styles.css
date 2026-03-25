@@ -1,4 +1,3 @@
-/* Reset */
 body {
     margin: 0;
     font-family: 'Segoe UI', Arial, sans-serif;
@@ -6,7 +5,6 @@ body {
     color: #fff;
 }
 
-/* HEADER */
 header {
     background: linear-gradient(90deg, #00bcd4, #2196f3);
     padding: 25px;
@@ -19,7 +17,6 @@ header h1 {
     font-size: 32px;
 }
 
-/* NAVBAR */
 nav {
     background-color: #111;
     padding: 12px;
@@ -39,13 +36,11 @@ nav a:hover {
     text-shadow: 0 0 5px #00e5ff;
 }
 
-/* SECCIONES */
 section {
     padding: 30px;
     text-align: center;
 }
 
-/* IMAGEN EQUIPO */
 .equipo-img {
     width: 300px;
     border-radius: 15px;
@@ -58,7 +53,6 @@ section {
     transform: scale(1.05);
 }
 
-/* CARDS INTEGRANTES */
 .integrantes {
     display: flex;
     justify-content: center;
@@ -101,13 +95,11 @@ section {
     transform: scale(1.1);
 }
 
-/* LISTAS */
 ul {
     list-style: none;
     padding: 0;
 }
 
-/* CONTENEDOR DOCKER / COMANDOS */
 .contenedor-info {
     display: flex;
     flex-wrap: wrap;
@@ -115,7 +107,6 @@ ul {
     gap: 25px;
 }
 
-/* CAJAS */
 .box {
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(10px);
@@ -130,29 +121,25 @@ ul {
 .box:hover {
     transform: translateY(-10px) scale(1.03);
     box-shadow: 0px 15px 30px rgba(0,188,212,0.6);
-    border: 1px solid #00e5ff;
+    border-color: #00e5ff;
 }
 
-/* TITULOS DE CAJAS */
 .box h3 {
     color: #00e5ff;
     margin-bottom: 10px;
 }
 
-/* TEXTO */
 .box p,
 .box li {
     color: #ddd;
     font-size: 14px;
 }
 
-/* LISTAS DENTRO */
 .box ul,
 .box ol {
     padding-left: 15px;
 }
 
-/* CODIGO */
 pre {
     background: #0d0d0d;
     padding: 12px;
@@ -164,7 +151,6 @@ pre {
     box-shadow: inset 0px 0px 10px rgba(0,0,0,0.7);
 }
 
-/* EFECTO TERMINAL */
 pre::before {
     content: "💻 terminal";
     display: block;
@@ -173,7 +159,53 @@ pre::before {
     margin-bottom: 5px;
 }
 
-/* FOOTER */
+.nav-integrantes,
+.nav-comandos,
+.nav-docker {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 30px 0;
+}
+
+.nav-integrantes a,
+.nav-comandos a,
+.nav-docker a {
+    display: inline-block;
+    padding: 10px 18px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    font-size: 14px;
+
+    background: linear-gradient(90deg, #00bcd4, #2196f3);
+    border: 1px solid rgba(0, 188, 212, 0.6);
+
+    transition: all 0.3s ease;
+}
+
+.nav-integrantes a:hover,
+.nav-comandos a:hover,
+.nav-docker a:hover {
+    background: linear-gradient(90deg, #2196f3, #00bcd4);
+    transform: scale(1.1);
+    box-shadow: 0 0 10px #00e5ff, 0 0 20px rgba(0,229,255,0.6);
+}
+
+.nav-comandos a,
+.nav-docker a {
+    padding: 7px 14px;
+    font-size: 13px;
+    border-radius: 8px;
+}
+
+.activo {
+    background: #00e5ff !important;
+    color: #000;
+}
+
 footer {
     background-color: #111;
     text-align: center;
