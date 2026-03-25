@@ -16,42 +16,91 @@
 <a href="comandos.html">Comandos</a>
 </nav>
 
+<section>
+<h2>Tutorial de instalación y uso de Docker</h2>
+<p>Guía paso a paso para instalar Docker en Windows y crear un contenedor web sencillo.</p>
+</section>
+
 <section class="contenedor-info">
 
 <div class="box">
-<h3>¿Qué es Docker?</h3>
-<p>Docker es una plataforma que permite crear, ejecutar y gestionar aplicaciones en contenedores, asegurando que funcionen igual en cualquier entorno.</p>
-</div>
-
-<div class="box">
-<h3>Requisitos</h3>
-<ul>
-<li>Windows 10/11 64 bits</li>
-<li>WSL 2</li>
-<li>Virtualización activada</li>
-<li>4GB RAM mínimo</li>
-</ul>
-</div>
-
-<div class="box">
-<h3>Instalación</h3>
+<h3>Descargar Docker Desktop</h3>
 <ol>
-<li>Descargar Docker Desktop</li>
-<li>Instalar el programa</li>
-<li>Reiniciar el equipo</li>
-<li>Abrir Docker Desktop</li>
+<li>Abrir navegador</li>
+<li>Ir a https://www.docker.com/get-started/</li>
+<li>Presionar “Download Docker Desktop”</li>
+<li>Descargar el instalador</li>
 </ol>
 </div>
 
 <div class="box">
-<h3>Verificación</h3>
-<pre>docker run hello-world</pre>
+<h3>Instalar Docker</h3>
+<ol>
+<li>Ejecutar Docker Desktop Installer.exe</li>
+<li>Aceptar términos</li>
+<li>Usar opción WSL 2</li>
+<li>Instalar</li>
+<li>Reiniciar el equipo si lo pide</li>
+</ol>
 </div>
 
 <div class="box">
-<h3>Uso básico</h3>
-<pre>docker build -t app .</pre>
-<pre>docker run -d -p 8080:80 app</pre>
+<h3>rimer arranque</h3>
+<ol>
+<li>Abrir Docker Desktop</li>
+<li>Esperar estado “Running”</li>
+<li>Abrir PowerShell o Terminal</li>
+<li>Ejecutar:</li>
+</ol>
+<pre>docker run hello-world</pre>
+<p>Esto descargará la imagen y verificará que Docker funciona correctamente.</p>
+</div>
+
+<div class="box">
+<h3>Crear proyecto</h3>
+<ol>
+<li>Crear carpeta: C:\docker-lab-web</li>
+<li>Crear archivo index.html</li>
+<li>Agregar una página HTML básica</li>
+</ol>
+</div>
+
+<div class="box">
+<h3>Crear Dockerfile</h3>
+<p>Crear archivo llamado <b>Dockerfile</b> (sin extensión)</p>
+<pre>
+FROM nginx:alpine
+COPY . /usr/share/nginx/html
+</pre>
+</div>
+
+<div class="box">
+<h3>Construir imagen</h3>
+<p>En la carpeta del proyecto ejecutar:</p>
+<pre>docker build -t mi-web-html .</pre>
+<p>Esto crea una imagen basada en nginx.</p>
+</div>
+
+<div class="box">
+<h3>Ejecutar contenedor</h3>
+<pre>docker run -d -p 8080:80 --name mi-web-container mi-web-html</pre>
+<ul>
+<li>-d: ejecuta en segundo plano</li>
+<li>-p 8080:80: conecta tu PC con el contenedor</li>
+</ul>
+</div>
+
+<div class="box">
+<h3>Ver resultado</h3>
+<p>Abrir navegador:</p>
+<pre>http://localhost:8080</pre>
+<p>Se verá tu página funcionando.</p>
+</div>
+
+<div class="box">
+<h3>Detener y eliminar</h3>
+<pre>docker stop mi-web-container</pre>
+<pre>docker rm mi-web-container</pre>
 </div>
 
 </section>
