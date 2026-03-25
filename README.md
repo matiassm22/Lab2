@@ -82,3 +82,7 @@ Lab2/
 └── img/
 
 ---
+## Evidencia Docker
+
+![Docker funcionando](img/Captura%20de%20pantalla%202026-03-25%20201023.png)
+![Docker funcionando](img/Captura%20de%20pantalla%202026-03-25%20201530.png)
