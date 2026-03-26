@@ -57,11 +57,11 @@ docker build -t lab2 .
 
 2. Ejecutar el contenedor:
 
-docker run -d -p 8081:80 lab2
+docker run -d -p 8080:80 lab2
 
 3. Abrir en el navegador:
 
-http://localhost:8081
+http://localhost:8080
 
 ---
 
